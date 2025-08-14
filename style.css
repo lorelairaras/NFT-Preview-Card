@@ -1,0 +1,135 @@
+:root {
+  --blue-500: hsl(215, 51%, 70%);
+  --cyan-400: hsl(178, 100%, 50%);
+  --blue-950: hsl(217, 54%, 11%);
+  --blue-900: hsl(216, 50%, 16%);
+  --blue-800: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--blue-950);
+  color: var(--blue-500);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.card {
+  background-color: var(--blue-900);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 350px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.card__image-container {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.card__image {
+  width: 100%;
+  display: block;
+}
+
+.card__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__image-container:hover .card__image-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card__title {
+  color: var(--white);
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card__title:hover {
+  color: var(--cyan-400);
+  cursor: pointer;
+}
+
+.card__description {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--blue-800);
+}
+
+.card__price,
+.card__time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__price {
+  color: var(--cyan-400);
+  font-weight: 600;
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__creator-avatar {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.card__creator p {
+  font-weight: 300;
+}
+
+.card__creator span {
+  color: var(--white);
+}
+
+.card__creator span:hover {
+  color: var(--cyan-400);
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    padding: 1.5rem 1.5rem 1.75rem;
+  }
+}
