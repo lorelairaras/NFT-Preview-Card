@@ -34,19 +34,19 @@ body {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
 }
 
-.card__image-container {
+.card-image-container {
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
 }
 
-.card__image {
+.card-image {
   width: 100%;
   display: block;
 }
 
-.card__image-overlay {
+.card-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,29 +60,29 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.card__image-container:hover .card__image-overlay {
+.card-image-container:hover .card-image-overlay {
   opacity: 1;
   cursor: pointer;
 }
 
-.card__title {
+.card-title {
   color: var(--white);
   font-size: 1.375rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.card__title:hover {
+.card-title:hover {
   color: var(--cyan-400);
   cursor: pointer;
 }
 
-.card__description {
+.card-description {
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
 
-.card__details {
+.card-details {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -90,40 +90,40 @@ body {
   border-bottom: 1px solid var(--blue-800);
 }
 
-.card__price,
-.card__time {
+.card-price,
+.card-time {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.card__price {
+.card-price {
   color: var(--cyan-400);
   font-weight: 600;
 }
 
-.card__creator {
+.card-creator {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.card__creator-avatar {
+.card-creator-avatar {
   width: 2rem;
   height: 2rem;
   border: 1px solid var(--white);
   border-radius: 50%;
 }
 
-.card__creator p {
+.card-creator p {
   font-weight: 300;
 }
 
-.card__creator span {
+.card-creator span {
   color: var(--white);
 }
 
-.card__creator span:hover {
+.card-creator span:hover {
   color: var(--cyan-400);
   cursor: pointer;
 }
