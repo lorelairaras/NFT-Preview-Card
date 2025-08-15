@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -13,7 +12,9 @@ export default {
         cyan: {
           400: "hsl(178, 100%, 50%)",
         },
-        white: "hsl(0, 0%, 100%)",
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
       },
     },
   },
